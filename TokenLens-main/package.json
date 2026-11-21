@@ -1,0 +1,36 @@
+{
+  "name": "copilot-prompt-coach",
+  "displayName": "Copilot Prompt Coach",
+  "description": "Analyzes your local GitHub Copilot Chat history and gives feedback on prompt patterns to help you write more effective, efficient prompts.",
+  "version": "0.3.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copilotPromptCoach.showDashboard",
+        "title": "Prompt Coach: Show Dashboard"
+      },
+      {
+        "command": "copilotPromptCoach.installLiveCapture",
+        "title": "Prompt Coach: Install Live Capture Hooks"
+      },
+      {
+        "command": "copilotPromptCoach.removeLiveCapture",
+        "title": "Prompt Coach: Remove Live Capture Hooks"
+      }
+    ]
+  },
+  "dependencies": {
+    "sql.js": "^1.11.0",
+    "gpt-tokenizer": "^2.5.1",
+    "string-similarity": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0"
+  }
+}
